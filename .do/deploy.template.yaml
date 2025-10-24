@@ -3,10 +3,9 @@ spec:
   services:
     - name: web
       environment_slug: node-js
-      github:
+      git:
         branch: claude/deploy-test-011CUSnzRbiowPbdpwQQmSoe
         repo_clone_url: https://github.com/bikram20/AppPlatform-Templates.git
-        deploy_on_push: true
       http_port: 8080
       instance_count: 1
       instance_size_slug: basic-xxs
