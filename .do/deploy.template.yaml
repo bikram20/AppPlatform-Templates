@@ -4,10 +4,9 @@ spec:
     - name: web
       environment_slug: node-js
       github:
-        branch: claude/add-do-deploy-button-011CUSnzRbiowPbdpwQQmSoe
+        branch: claude-deploy-test
         repo_clone_url: https://github.com/bikram20/AppPlatform-Templates.git
         deploy_on_push: true
-      source_dir: /templates/hello-world-nodejs
       http_port: 8080
       instance_count: 1
       instance_size_slug: basic-xxs

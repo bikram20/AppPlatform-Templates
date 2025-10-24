@@ -2,6 +2,12 @@
 
 A curated collection of ready-to-deploy application templates for DigitalOcean App Platform. Each template includes a one-click "Deploy to DigitalOcean" button for instant deployment.
 
+## Quick Deploy - Hello World Node.js
+
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/bikram20/AppPlatform-Templates/tree/claude-deploy-test)
+
+This simplified version deploys a Hello World Node.js app directly from the repository root.
+
 ## What is This?
 
 This repository contains production-ready application templates that can be deployed to DigitalOcean App Platform with a single click. Each template is a complete, working application with all necessary configuration files.
