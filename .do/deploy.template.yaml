@@ -1,0 +1,20 @@
+spec:
+  name: hello-world-nodejs
+  services:
+    - name: web
+      environment_slug: node-js
+      github:
+        branch: claude/add-do-deploy-button-011CUSnzRbiowPbdpwQQmSoe
+        repo_clone_url: https://github.com/bikram20/AppPlatform-Templates.git
+        deploy_on_push: true
+      source_dir: /templates/hello-world-nodejs
+      http_port: 8080
+      instance_count: 1
+      instance_size_slug: basic-xxs
+      routes:
+        - path: /
+      run_command: npm start
+      envs:
+        - key: NODE_ENV
+          scope: RUN_TIME
+          value: "production"
