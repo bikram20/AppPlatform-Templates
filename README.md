@@ -1,102 +1,100 @@
-# DigitalOcean App Platform Templates
+# Hello World - Node.js
 
-A curated collection of ready-to-deploy application templates for DigitalOcean App Platform. Each template is a self-contained, production-ready application that you can deploy to your account.
+A simple, production-ready Node.js web application that demonstrates how to deploy to DigitalOcean App Platform. Perfect for getting started or as a foundation for building REST APIs.
 
-## What is This?
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/AppPlatform-Templates/HelloWorld-Template/tree/main)
 
-This repository contains production-ready application templates organized in the `templates/` directory. Each template is a complete, working application with all necessary configuration files, documentation, and deployment instructions.
+## What This Template Includes
 
-## Available Templates
+- **Express.js Web Server**: Lightweight and fast Node.js framework
+- **RESTful API Endpoints**: Multiple example endpoints demonstrating different patterns
+- **Health Checks**: Built-in health monitoring endpoint
+- **Graceful Shutdown**: Proper signal handling for zero-downtime deployments
+- **Error Handling**: Comprehensive error handling middleware
+- **Production Ready**: Security best practices and environment-based configuration
 
-### Web Applications & Services
+## Tech Stack
 
-| Template | Description | Stack | Resources |
-|----------|-------------|-------|-----------|
-| [Hello World (Node.js)](./templates/hello-world-nodejs) | Simple Node.js web server - perfect for getting started | Node.js 20 | Basic ($5/mo) |
+- **Runtime**: Node.js 18.x or higher
+- **Framework**: Express.js 4.18.x
+- **Deployment**: DigitalOcean App Platform
+- **Dependencies**: Minimal (only Express.js)
 
-## Quick Start
+## Features
 
-1. **Browse Templates**: Explore the `templates/` directory to find an application that fits your needs
-2. **Read Template README**: Each template has its own README with detailed deployment instructions
-3. **Deploy**: Follow the template-specific deployment steps:
-   - Fork this repository to your GitHub account
-   - Copy the template's `.do/deploy.template.yaml` to your repository root
-   - Click the "Deploy to DigitalOcean" button
-   - Configure any required environment variables
-   - Launch your app
+This Hello World application provides several useful endpoints:
 
-**Note**: DigitalOcean requires `.do/deploy.template.yaml` at the repository root. Each template's README provides specific deployment instructions.
+- **`GET /`** - Welcome message with timestamp and environment info
+- **`GET /health`** - Health check endpoint for monitoring (returns uptime and status)
+- **`GET /api/info`** - API documentation and available endpoints
+- **`POST /api/echo`** - Echo endpoint that returns your request body
 
-## How It Works
+## Prerequisites
 
-Each template contains:
-- **Application Code**: Ready-to-run source code
-- **`.do/deploy.template.yaml`**: DigitalOcean App Platform configuration
-- **README.md**: Template documentation including:
-  - What the template does
-  - Prerequisites
-  - Resource costs
-  - Version information
-  - Deploy button
+- DigitalOcean account ([Sign up here](https://www.digitalocean.com/))
+- Basic understanding of Node.js (optional, for local development)
 
-## Creating Your Own Template
+## Estimated Cost
 
-See the [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md) for detailed instructions on:
-- Creating new templates
-- Testing deployments
-- Template structure requirements
-- Best practices
+- **Compute**: Basic XXS (512MB RAM, 1 vCPU) - **$5/month**
+- **Bandwidth**: 100GB included
+- **Total**: **~$5/month** for a production-ready application
 
-## Contributing
+> Cost can be reduced further by using App Platform's free tier (if available) or by scaling down when not in use.
 
-Contributions are welcome! To add a new template:
+## Deployment Instructions
 
-1. Fork this repository
-2. Create a new directory under `templates/`
-3. Follow the structure guidelines in [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md)
-4. Test your deployment
-5. Submit a pull request
+### One-Click Deploy
 
-## Template Categories (Coming Soon)
+1. Click the **"Deploy to DigitalOcean"** button above
+2. Authorize DigitalOcean to access the GitHub repository (read-only)
+3. Configure deployment settings:
+   - **App Name**: Choose a unique name for your app
+   - **Region**: Select the closest region to your users
+   - **Branch**: Keep as `main` (or change if deploying from a different branch)
+4. Review environment variables (defaults are set for production)
+5. Click **"Deploy"**
+6. Wait 2-5 minutes for the build and deployment to complete
 
-- **Web Frameworks**: React, Vue, Next.js, Express, Django, Flask
-- **Static Sites**: Hugo, Jekyll, Gatsby, Docusaurus
-- **Databases**: PostgreSQL, MySQL, Redis, MongoDB
-- **CMS**: WordPress, Ghost, Strapi, Directus
-- **E-commerce**: WooCommerce, Magento, PrestaShop
-- **API Services**: REST APIs, GraphQL, gRPC
-- **Monitoring**: Grafana, Prometheus, Uptime Kuma
-- **AI/ML**: TensorFlow, PyTorch, Jupyter Notebooks
+### Post-Deployment
 
-## Requirements
+Once deployed, your application will be available at:
+```
+https://[your-app-name].ondigitalocean.app
+```
 
-To deploy these templates, you need:
-- A DigitalOcean account ([Sign up here](https://www.digitalocean.com/))
-- Basic understanding of the application stack you're deploying
+**Test Your Deployment:**
 
-## Support
+```bash
+# Test the welcome endpoint
+curl https://[your-app-name].ondigitalocean.app/
 
-- **DigitalOcean App Platform Docs**: https://docs.digitalocean.com/products/app-platform/
-- **Issues**: Report problems or request templates via GitHub Issues
-- **Community**: Join the DigitalOcean Community for help
+# Check health status
+curl https://[your-app-name].ondigitalocean.app/health
 
-## License
+# Get API information
+curl https://[your-app-name].ondigitalocean.app/api/info
 
-This repository is available under the MIT License. Individual templates may have their own licenses - check each template's README.
+# Test echo endpoint
+curl -X POST https://[your-app-name].ondigitalocean.app/api/echo \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Hello from DigitalOcean!"}'
+```
 
-## About DigitalOcean App Platform
+## Local Development
 
-DigitalOcean App Platform is a Platform-as-a-Service (PaaS) that allows you to deploy applications directly from source code. It automatically builds, deploys, and scales your applications with:
-- Automatic HTTPS
-- Global CDN
-- Automatic deployments from Git
-- Built-in monitoring
-- Easy scaling
+Want to test or modify the application locally? Follow these steps:
 
-## Maintenance
+### Prerequisites
 
-Templates are regularly updated to use the latest stable versions of dependencies. Each template's README indicates the version information and last update date.
+- Node.js 18.x or higher installed
+- npm (comes with Node.js)
 
----
+### Setup
 
-**Need help?** Check out the [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md) or open an issue!
+```bash
+# Clone the repository
+git clone https://github.com/bikram20/AppPlatform-Templates.git
+cd AppPlatform-Templates/templates/hello-world-nodejs
+
+# Install dependencies

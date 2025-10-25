@@ -5,8 +5,7 @@ spec:
       environment_slug: node-js
       git:
         branch: main
-        repo_clone_url: https://github.com/bikram20/AppPlatform-Templates.git
-      source_dir: /templates/hello-world-nodejs
+        repo_clone_url: https://github.com/AppPlatform-Templates/HelloWorld-Template.git
       http_port: 8080
       instance_count: 1
       instance_size_slug: basic-xxs
