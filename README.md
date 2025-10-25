@@ -8,12 +8,6 @@ A curated collection of ready-to-deploy application templates for DigitalOcean A
 
 This simplified version deploys a Hello World Node.js app directly from the repository root.
 
-### Testing Escaped Branch Name
-
-Testing if escaped slash works: `claude\/test-escape-011CUSnzRbiowPbdpwQQmSoe`
-
-[![Deploy to DO - Escaped Test](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/bikram20/AppPlatform-Templates/tree/claude/test-escape-011CUSnzRbiowPbdpwQQmSoe)
-
 ## What is This?
 
 This repository contains production-ready application templates that can be deployed to DigitalOcean App Platform with a single click. Each template is a complete, working application with all necessary configuration files.
