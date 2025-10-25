@@ -1,16 +1,10 @@
 # DigitalOcean App Platform Templates
 
-A curated collection of ready-to-deploy application templates for DigitalOcean App Platform. Each template includes a one-click "Deploy to DigitalOcean" button for instant deployment.
-
-## Quick Deploy - Hello World Node.js
-
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/bikram20/AppPlatform-Templates/tree/main)
-
-This simplified version deploys a Hello World Node.js app directly from the repository root.
+A curated collection of ready-to-deploy application templates for DigitalOcean App Platform. Each template is a self-contained, production-ready application that you can deploy to your account.
 
 ## What is This?
 
-This repository contains production-ready application templates that can be deployed to DigitalOcean App Platform with a single click. Each template is a complete, working application with all necessary configuration files.
+This repository contains production-ready application templates organized in the `templates/` directory. Each template is a complete, working application with all necessary configuration files, documentation, and deployment instructions.
 
 ## Available Templates
 
@@ -23,9 +17,15 @@ This repository contains production-ready application templates that can be depl
 ## Quick Start
 
 1. **Browse Templates**: Explore the `templates/` directory to find an application that fits your needs
-2. **Click Deploy Button**: Open the template's README and click the "Deploy to DigitalOcean" button
-3. **Configure**: DigitalOcean will prompt you for any required environment variables
-4. **Launch**: Your app will be built and deployed automatically
+2. **Read Template README**: Each template has its own README with detailed deployment instructions
+3. **Deploy**: Follow the template-specific deployment steps:
+   - Fork this repository to your GitHub account
+   - Copy the template's `.do/deploy.template.yaml` to your repository root
+   - Click the "Deploy to DigitalOcean" button
+   - Configure any required environment variables
+   - Launch your app
+
+**Note**: DigitalOcean requires `.do/deploy.template.yaml` at the repository root. Each template's README provides specific deployment instructions.
 
 ## How It Works
 
