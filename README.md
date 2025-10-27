@@ -2,7 +2,7 @@
 
 A simple, production-ready Node.js web application that demonstrates how to deploy to DigitalOcean App Platform. Perfect for getting started or as a foundation for building REST APIs.
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/AppPlatform-Templates/HelloWorld-Template/tree/main)
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/AppPlatform-Templates/HelloWorld-Template/tree/claude/initial-template-setup-011CUXyg8Xby28Js6XCtJAqJ)
 
 ## What This Template Includes
 
